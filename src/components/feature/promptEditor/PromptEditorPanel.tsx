@@ -1,4 +1,4 @@
-import { Code, TrashBin } from '@gravity-ui/icons'
+import { TrashBin } from '@gravity-ui/icons'
 import type { JevStatus } from '@/hooks/usePromptAnalysis'
 import type { PromptAnalysis, PromptPayload } from '@/types/analysis'
 import { AnalysisSummary } from './AnalysisSummary'
@@ -19,9 +19,8 @@ export function PromptEditorPanel({ prompt, onPromptChange, payload, analysis, s
     <section className="col-span-12 flex h-full flex-col overflow-hidden border-r border-line bg-surface lg:col-span-7">
       <div className="flex h-11 shrink-0 items-center justify-between border-b border-line-soft px-6">
         <div className="flex items-center gap-2 font-mono text-xs">
-          <span className="size-2 rounded-full bg-brand" />
           <span className="flex items-center gap-1.5 font-semibold">
-            <Code className="size-4 text-brand" /> Entrada de Prompt
+            Entrada de Prompt
           </span>
           <span className="text-ink-3">.md</span>
         </div>
