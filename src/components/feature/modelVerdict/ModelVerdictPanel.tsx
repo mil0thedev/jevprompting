@@ -127,10 +127,6 @@ export function ModelVerdictPanel({
 
   return (
     <section className="col-span-12 flex h-full flex-col gap-4 overflow-y-auto bg-canvas p-6 lg:col-span-5">
-      <div className="flex items-center gap-2 border-b border-line pb-2">
-        <Sparkles className="size-[18px] text-brand" />
-        <h2 className="text-sm font-bold tracking-tight">Veredicto</h2>
-      </div>
       {renderBody()}
     </section>
   )
