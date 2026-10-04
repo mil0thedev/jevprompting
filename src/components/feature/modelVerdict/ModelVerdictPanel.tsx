@@ -132,10 +132,6 @@ export function ModelVerdictPanel({
         <h2 className="text-sm font-bold tracking-tight">Veredicto</h2>
       </div>
       {renderBody()}
-      <p className="mt-auto pt-2 font-mono text-[10px] leading-relaxed text-ink-3">
-        Precios en vivo de OpenRouter. Latencia y tokens de salida son estimaciones; el conteo de tokens usa o200k_base y se
-        ajusta por proveedor.
-      </p>
     </section>
   )
 }
