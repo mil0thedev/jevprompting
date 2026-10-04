@@ -10,7 +10,7 @@ React 19 + Vite 8 + TypeScript 7 + Tailwind 4. Markdown prompt editor that ranks
 ## API key (BYOK)
 - Public project: each user enters their own TypeSafe key in the header "API Key" dialog. Stored in `localStorage` (`jevprompting:typesafe-api-key`) and sent as `Authorization` to `/api/jev`.
 - TypeSafe only allows CORS from `console.typesafe.ai`, so the browser cannot call `api.typesafe.ai` directly. Vite proxies `/api/jev` → `https://api.typesafe.ai/v1/systemone` forwarding the user's header (see `vite.config.ts`). `TYPESAFE_API_KEY` in `.env` is an optional local-dev fallback used only when the request has no key — never set it in a public deployment.
-- The proxy only exists in `vite dev`/`vite preview`; a production deploy needs an equivalent serverless function that forwards the `Authorization` header.
+- In production the same `/api/jev` route is served by the Vercel Edge Function `api/jev.ts` (auto-published by Vercel), which forwards to the same origin with the user's `Authorization`. `vite dev`/`vite preview` use the Vite proxy instead; only one of the two is active per environment.
 - 401/403 from Jev → verdict panel asks for a key. Analysis runs automatically, debounced (`ANALYSIS_DEBOUNCE_MS`), on every prompt or key change. Text-only input.
 
 ## Theming
