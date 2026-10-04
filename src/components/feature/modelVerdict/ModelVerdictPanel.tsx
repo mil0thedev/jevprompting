@@ -1,5 +1,5 @@
 import { useMemo, useState, type ComponentType, type ReactNode, type SVGProps } from 'react'
-import { ArrowsRotateRight, Ban, CircleExclamation, CloudSlash, Key, PencilToLine, Sparkles } from '@gravity-ui/icons'
+import { ArrowsRotateRight, Ban, CircleExclamation, CloudSlash, Key, PencilToLine } from '@gravity-ui/icons'
 import type { AnalysisError } from '@/hooks/usePromptAnalysis'
 import { buildRationale, pickAlternatives } from '@/services/modelRanker'
 import type { PromptAnalysis } from '@/types/analysis'
