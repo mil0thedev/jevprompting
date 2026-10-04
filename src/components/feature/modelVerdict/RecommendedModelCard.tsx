@@ -36,10 +36,6 @@ export function RecommendedModelCard({ ranked, isPrimary, rationale, onReset }: 
     <article className="flex flex-col gap-4 rounded-xl border border-line bg-surface p-5 shadow-[0_1px_3px_rgba(60,64,67,0.08)]">
       <div className="flex items-start justify-between gap-3">
         <div className="flex min-w-0 flex-col gap-1">
-          <span className={`flex items-center gap-1.5 font-mono text-xs font-semibold ${isPrimary ? 'text-ok' : 'text-brand'}`}>
-            <span className={`size-2 rounded-full ${isPrimary ? 'bg-ok' : 'bg-brand'}`} />
-            {isPrimary ? 'Recomendación Óptima' : 'Ruta Seleccionada'}
-          </span>
           <h3 className="truncate text-lg font-bold tracking-tight">{model.name}</h3>
           <span className="truncate font-mono text-[11px] text-ink-2">{model.id}</span>
         </div>
@@ -81,7 +77,7 @@ export function RecommendedModelCard({ ranked, isPrimary, rationale, onReset }: 
 
       <div className="flex items-center justify-between border-t border-line-soft pt-3">
         {isPrimary ? (
-          <span className="flex items-center gap-1.5 font-mono text-xs font-medium text-ink-2">
+          <span className="flex items-center gap-1.5 font-mono text-xs font-medium text-ok">
             <span className="size-1.5 rounded-full bg-ok" /> Recomendación Óptima
           </span>
         ) : (
