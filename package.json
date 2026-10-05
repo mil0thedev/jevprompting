@@ -1,0 +1,35 @@
+{
+  "name": "jevprompting",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --use-system-ca node_modules/vite/bin/vite.js",
+    "build": "tsc --noEmit && vite build",
+    "preview": "node --use-system-ca node_modules/vite/bin/vite.js preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@codemirror/lang-markdown": "6.5.2",
+    "@codemirror/language": "6.12.4",
+    "@codemirror/view": "6.43.13",
+    "@gravity-ui/icons": "2.22.0",
+    "@lezer/highlight": "1.2.5",
+    "@uiw/react-codemirror": "4.25.12",
+    "gpt-tokenizer": "4.0.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "24.19.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  }
+}
