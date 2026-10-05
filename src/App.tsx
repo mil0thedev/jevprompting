@@ -53,7 +53,6 @@ export default function App() {
           jevError={error}
           isEmpty={isEmpty}
           hasApiKey={Boolean(apiKey)}
-          onOpenApiKey={openApiKey}
           catalogStatus={catalog.status}
           catalogError={catalog.status === 'error' ? catalog.error : null}
           onReloadCatalog={catalog.reload}

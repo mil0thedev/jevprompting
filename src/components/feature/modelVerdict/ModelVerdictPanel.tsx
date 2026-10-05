@@ -14,7 +14,6 @@ interface ModelVerdictPanelProps {
   jevError: AnalysisError | null
   isEmpty: boolean
   hasApiKey: boolean
-  onOpenApiKey: () => void
   catalogStatus: 'loading' | 'ready' | 'error'
   catalogError: string | null
   onReloadCatalog: () => void
@@ -43,7 +42,6 @@ export function ModelVerdictPanel({
   jevError,
   isEmpty,
   hasApiKey,
-  onOpenApiKey,
   catalogStatus,
   catalogError,
   onReloadCatalog,
